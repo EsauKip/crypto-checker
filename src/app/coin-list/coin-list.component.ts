@@ -7,6 +7,7 @@ import { ApiService } from '../service/api.service';
   styleUrls: ['./coin-list.component.css']
 })
 export class CoinListComponent implements OnInit {
+  bannerData:any=[];
 
   constructor(private api :ApiService) { }
 
@@ -17,6 +18,8 @@ export class CoinListComponent implements OnInit {
   getBannerData() {
     this.api.getTrendingCurrency('usd').subscribe(data => {
       console.log(data);
+      this.bannerData = data;
+      
     }
     )
   }
