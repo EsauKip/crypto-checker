@@ -2,8 +2,8 @@
   <mat-toolbar>
     <span>CRYPTO TRACKER</span>
     <span class="spacer"></span>
-    <mat-form-field>
-      <mat-select  [(ngModel)]="selectedCurrency")]>
+    <mat-form-field appearance="outline">
+      <mat-select class="text-sm" (valueChange)="sendCurrency($event)"  [(ngModel)]="selectedCurrency">
         <mat-option selected value="USD">USD</mat-option>
         <mat-option value="EUR">EUR</mat-option>
         <mat-option value="GBP">GBP</mat-option>
