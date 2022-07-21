@@ -1,0 +1,46 @@
+.header{
+    height: 40%;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: center;
+    color: #fff;
+}
+.header h1{
+    font-size: 12rem;
+    font-weight: bold;
+    margin-bottom: 0;
+   
+    line-height: 1.2rem;
+    letter-spacing: 0.00833em;
+
+}
+.header h6{
+    color: darkgrey;
+    text-transform: capitalize;
+    font-size: 0.8rem;
+    font-weight: 500;
+    margin-bottom: 0;
+    
+    line-height: 1.2rem;
+    letter-spacing: 0.00833em;
+}
+.banner{
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../../assets/banner1.jpg');
+    background-size: cover;
+    height: 500px;
+    width: 100%;
+}
+.sub-header{
+    height: 40%;
+    display: flex;
+    /* flex-direction: column;
+    justify-content: center; */
+    align-items: center;
+
+}
