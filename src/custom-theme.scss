@@ -20,7 +20,7 @@ $crypto-checker-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$crypto-checker-theme: mat.define-light-theme((
+$crypto-checker-theme: mat.define-dark-theme((
   color: (
     primary: $crypto-checker-primary,
     accent: $crypto-checker-accent,

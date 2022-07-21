@@ -2,5 +2,16 @@
   <mat-toolbar>
     <span>CRYPTO TRACKER</span>
     <span class="spacer"></span>
+    <mat-form-field>
+      <mat-select  [(ngModel)]="selectedCurrency")]>
+        <mat-option selected value="USD">USD</mat-option>
+        <mat-option value="EUR">EUR</mat-option>
+        <mat-option value="GBP">GBP</mat-option>
+        <mat-option value="CNY">CNY</mat-option>
+        <mat-option value="JPY">JPY</mat-option>
+        <mat-option value="KRW">KRW</mat-option>
+        <mat-option value="BTC">BTC</mat-option>
+      </mat-select>
+    </mat-form-field>
   </mat-toolbar>
 </p>
