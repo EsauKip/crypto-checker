@@ -3,6 +3,7 @@ import { ApiService } from '../service/api.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { Router } from '@angular/router';
 
 
 @Component({
@@ -16,7 +17,7 @@ export class CoinListComponent implements OnInit {
   displayedColumns: string[] = ['symbol', 'current_price', 'price_change_percentage_24h', 'market_cap'];
   @ViewChild(MatPaginator)paginator!: MatPaginator;
   @ViewChild(MatSort)sort!: MatSort;
-  constructor(private api :ApiService) { }
+  constructor(private api :ApiService, private router: Router) { }
 
   ngOnInit(): void {
     this.getAllData();
@@ -44,6 +45,9 @@ applyFilter(event: Event) {
   if (this.dataSource.paginator) {
     this.dataSource.paginator.firstPage();
   }
+}
+goToDetails(row:any) {
+ this.router.navigate(['/coin-detail',row.id]);
 }
 }
 
