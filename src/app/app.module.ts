@@ -14,6 +14,7 @@ import {MatTableModule} from '@angular/material/table';
 import { CoinDetailComponent } from './coin-detail/coin-detail.component';
 import { HttpClientModule } from '@angular/common/http';
 import { MatSortModule } from '@angular/material/sort';
+import { NgChartsModule } from 'ng2-charts';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { MatSortModule } from '@angular/material/sort';
     AppRoutingModule,
     BrowserAnimationsModule,
     MatToolbarModule,
+    NgChartsModule,
     MatSortModule,
     MatPaginatorModule,
     FormsModule,
