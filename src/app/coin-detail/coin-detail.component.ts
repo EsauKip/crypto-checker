@@ -48,6 +48,7 @@ export class CoinDetailComponent implements OnInit {
       this.coinId=val['id'];
   })
   this.getCoinData();
+  this.getGraphData();
   }
   getCoinData(){
     this.api.getCurrencyById(this.coinId ).subscribe(data => {
@@ -56,5 +57,14 @@ export class CoinDetailComponent implements OnInit {
     }
     )
   }
+  getGraphData(){
+    this.api.getGraphicalCurrencyData(this.coinId,"USD",1)
+    .subscribe(data => {
+      console.log(data);
+   
+    }
+    )
+  }
+
 
 }

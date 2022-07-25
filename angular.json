@@ -103,5 +103,7 @@
       }
     }
   },
-  "defaultProject": "crypto-checker"
+  "cli": {
+    "analytics": "adcdef89-73b3-49bf-be13-907ae0f304bc"
+  }
 }
