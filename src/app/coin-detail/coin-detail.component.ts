@@ -15,7 +15,17 @@ export class CoinDetailComponent implements OnInit {
   constructor(private api :ApiService, private activatedRoute:ActivatedRoute) { }
 
   ngOnInit(): void {
+    this.activatedRoute.params.subscribe(val=>{
+      this.coinId=val['id'];
+  })
+  this.getCoinData();
   }
-  getCoinData(){}
+  getCoinData(){
+    this.api.getCurrencyById(this.coinId ).subscribe(data => {
+      console.log(this.coinData);
+      this.coinData = data;
+    }
+    )
+  }
 
 }
