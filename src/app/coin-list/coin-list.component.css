@@ -71,3 +71,29 @@ height: 200px;
     font-weight: 700;
    
 }
+table{
+    width: 100%;
+}
+.mat-form-field{
+    width: 100%;
+    font-size: 14px;
+}
+td, th{
+    padding: 10px;
+    width: 25px;
+}
+:host ::ng-deep .mat-sort-header-container{
+  color: #fff;
+}
+:host ::ng-deep .mat-paginator-outer-container{
+ background-color: rgb(28, 28, 36);
+}
+:host ::ng-deep tr.mat-header-row{
+    background-color: rgb(15, 80, 80);
+}
+:host ::ng-deep .mat-header-cell{
+    color: #fff;
+}
+:host ::ng-deep tr.mat-row{
+    height: 70px;
+}
