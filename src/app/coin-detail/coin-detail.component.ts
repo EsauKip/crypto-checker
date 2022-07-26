@@ -12,7 +12,7 @@ import { BaseChartDirective } from 'ng2-charts';
 export class CoinDetailComponent implements OnInit {
   coinData:any;
   coinId!: string;
-  days:number=1;
+  days:number=5;
   currency:string='usd';
   public lineChartData:ChartConfiguration['data'] = {
     datasets:[
@@ -58,8 +58,20 @@ export class CoinDetailComponent implements OnInit {
     )
   }
   getGraphData(){
-    this.api.getGraphicalCurrencyData(this.coinId,"USD",1)
+    this.api.getGraphicalCurrencyData(this.coinId,"USD",5)
     .subscribe(data => {
+      setTimeout(() => {
+        this.myLineChart.chart?.update();
+      },200)
+      this.lineChartData.datasets[0].data=data.prices.map((a:any)=>{return a[1]});
+      this.lineChartData.labels=data.prices.map((a:any)=>{
+      let date = new Date(a[0]);
+      let time= date.getHours()>12?
+    `${date.getHours()-12}:${date.getMinutes()}`:
+  `${date.getHours()}:${date.getMinutes()} Am`
+return this.days === 1? time:date.toLocaleDateString();
+});
+      
       console.log(data);
    
     }
@@ -67,4 +79,4 @@ export class CoinDetailComponent implements OnInit {
   }
 
 
-}
+      }
