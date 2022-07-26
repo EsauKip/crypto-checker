@@ -98,10 +98,10 @@
 }
 
 .btn-custom:focus {
-    background: #009688;
+    background: #009600;
     font-weight: 700;
     font-size: 18px;
-    border: 1px solid #009688;
+    border: 1px solid #009600;
 }
 
 
