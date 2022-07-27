@@ -1,7 +1,23 @@
 # CryptoChecker
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.8.
 
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.8.
+# Description
+This is a web based application where one can view the current trending rates of crypto-currency with different currency rates.It lists all the coins and their price variation within a range of 24hours,30 days,90 days and 1 year .It also displays the graphical data.
+# Set-Up and installation
+* install angular cli
+* create angular application
+* cd into that application 
+* serve the application to port4200
+# Known Bugs
+* Interpolating the api 
+# Technologies used
+* Html
+* Css
+* Bootstrap
+* Angular
+# Contact information
+* [Email]kipronoesau28@gmail.com
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
